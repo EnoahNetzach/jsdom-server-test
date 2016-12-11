@@ -1,0 +1,30 @@
+{
+  "name": "jsdom-server-test",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "babel-polyfill": "^6.20.0",
+    "babel-preset-latest": "^6.16.0",
+    "babel-register": "^6.18.0",
+    "jsdom": "^9.8.3",
+    "mocha": "^3.2.0",
+    "react-scripts": "0.8.3"
+  },
+  "dependencies": {
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "./e2e.sh",
+    "test:jest": "react-scripts test --testPathPattern=/jest/",
+    "test:jest-jsdom": "react-scripts test --env=jsdom --testPathPattern=/jest/",
+    "test:mocha": "mocha --require babel-register --require babel-polyfill src/mocha/*.js"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  }
+}
